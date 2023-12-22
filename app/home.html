@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>★ Shy's Kandi Shop</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body>
+   <nav>
+    <div class="navContainer">
+      <img src="https://cdn.glitch.global/60a0397b-9992-48f8-8dbb-36f82312830b/star.svg?v=1701229032380" id="star" alt="The black outline of a star. When hovered over, the star spins.">
+
+      <a href="home.html" class="navitems">home</a>
+      <a href="products.html" class="navitems">shop kandi</a>
+      <a href="contactus.html" class="navitems">contact us</a>       
+      
+     </div>
+    </nav>
+    <div class="bodyContainer">
+       <div class="content">
+         <h2>
+         Welcome to Shy's Kandi Shop!
+        </h2>
+       <p>
+         We are dedicated to producing quality wearable artworks while
+         upholding the kandi community's motto of Peace, Love, Unity,
+         and Respect. We offer a wide variery of items so be sure to
+         look around! 
+       </p>
+      </div>
+       
+       <div class="sideBar">
+         <img id="logo" src="https://cdn.glitch.global/60a0397b-9992-48f8-8dbb-36f82312830b/logo.png?v=1701447955279" alt="The shop's logo. It is a graphic of purple, pink, yellow, and green. The letters 'SKS' are multicolored and surrounded by multicolored beads. It uses the shop's colors of lime green, bright blue, lemon yellow, hot pink, and purple. Everything is outlined in black.">
+        <ul>
+          <li> Wide variety of products</li>
+          <li> Ethical working conditions</li>
+          <li> Sustainable practices</li>
+         </ul> 
+      </div>
+     
+      </div>
+    <div class="footer">
+       <div id="footerBoxes">
+        <div id="firstPurchase">
+          <h4>
+            Get a free item with your first purchase!
+          </h4>
+          <p>
+            As a thank you, one of your items will be
+            on the house the very first time you place
+            an order. Terms and conditions apply.
+          </p>
+          <div class="footerBtnDiv">
+          <button class="footerBtn">
+            learn more
+          </button>
+          </div>
+        </div>
+      <div id="freeGifts">
+          <h4>
+            Personalized Gifts
+          </h4>
+          <p>
+            To show our appreciation, every order comes
+            with one or two free surprise gifts selected
+            especially to fit with the interests shown in
+            your purchase.
+          </p>
+        <div class="footerBtnDiv">
+          <button class="footerBtn">
+            learn more
+          </button>
+        </div>
+        </div>
+      </div>
+    </div>
+   
+    <div class="hideDiv">
+      <button id="hideBtn" onclick="hideAds()">
+        hide offers
+      </button>
+    </div>
+    
+    <script>
+    function hideAds()
+      {
+        let x = document.getElementById("footerBoxes");
+        let y = document.getElementById("hideBtn");
+        
+        x.style.display = "none";
+        y.style.display = "none";
+      }
+    
+    </script>
+  </body>
+</html>

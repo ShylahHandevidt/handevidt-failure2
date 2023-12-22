@@ -1,0 +1,240 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Ariel, helvetica, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(217deg, rgba(255, 112, 166.8), rgba(159, 79, 220, 0) 70.71%),
+            linear-gradient(127deg, rgba(112, 214, 255, .8), rgba( 	250, 231, 109, .8) 70.71%),
+            linear-gradient(336deg, rgba(112, 255, 129, .8), rgba( 	159, 79, 220, 0) 70.71%);
+  color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+nav{
+  width: 100%;
+  height: 6rem;
+  background-color: white;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid black;
+}
+
+.navContainer {
+  max-width: 50%;
+  min-width: 275px;
+  height: 6rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLink::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+   background: linear-gradient(217deg, rgba(255, 112, 166.8), rgba(159, 79, 220, 0) 70.71%),
+            linear-gradient(127deg, rgba(112, 214, 255, .8), rgba( 	250, 231, 109, .8) 70.71%),
+            linear-gradient(336deg, rgba(112, 255, 129, .8), rgba( 	159, 79, 220, 0) 70.71%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navitems:hover::before {
+  transform: scaleX(1);
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  position: relative;
+  
+}
+
+.spacer{
+  padding: 2rem 0;
+}
+
+.productContainer{
+  background: white;
+  max-width: 60%;
+  min-width: 200px;
+  margin: auto;
+  padding: 1rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem; 
+}
+
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+button{
+  margin: auto;
+  padding: 1rem;
+  width: 7rem;
+  background-color: #FAE76D;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+button:hover{
+  background-color: rgba(250, 231, 109, 0.8);
+}
+
+.section2{
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 50%;
+  padding: 0 1rem;
+}
+
+select{
+  padding: .25rem;
+  width: 70%;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+}
+label, select {
+  display: block;
+}
+
+img{
+  display: block;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+textarea{
+  width: 90%;
+  height: 8rem;
+  resize: none;
+  padding: 0.5rem;
+  margin: 1rem auto;
+}
+
+#starRotator, #singles{
+  padding: 1rem 0;
+}
+
+.flowerCuff{
+  padding: 4rem 0;
+}
+.heartCuffs, .spikedCuff{
+  padding: 2rem 0;
+}
+
+.colors:after{
+  content:"(background/accent)";
+  font-size: 0.85rem;
+  position: relative;
+  left: 5px;
+  color: dimgrey;
+}
+
+.flowerColors:after{
+  content:"(petals/centers/inbetweens)";
+  font-size: 0.85rem;
+  position: relative;
+  left: 5px;
+  color: dimgrey;
+}
+
+.starColors:after{
+  content:"(bumpers/middle)";
+  font-size: 0.85rem;
+  position: relative;
+  left: 5px;
+  color: dimgrey;
+}
+
+#star{
+  border: none;
+  position: relative;
+  margin: 0;
+  width: 50px;
+  transform-origin: 50% 52%;
+  animation-delay: 0.5s;
+  animation-direction: forwards;
+}
+#star::before {
+  content: '';
+  background-image: url(https://cdn.glitch.global/60a0397b-9992-48f8-8dbb-36f82312830b/starDetails.svg?v=1701230019492);
+  position: absolute;
+  display: block;
+  background-size: 50px;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+}
+
+#star:hover{
+  transition: transform 1.2s linear;
+
+  transform: rotate(360deg);
+}
+
+#star::after {
+  position: absolute;
+  z-index: 190;
+  top: 0;
+  left: 2rem;
+  width: 5px;
+  height: 5px;
+  content: '';
+  background-color: red;
+  border-radius: 50%;
+  transform: translate(-50%, -50%); 
+}
+
+@keyframes star-anim {
+  to { transform: rotate(360deg); }   
+}
+
+@keyframes star-details {
+  50% {
+    opacity: 1;
+    transform: scale(2.5);
+  }   
+  100% {
+    opacity: 0;
+    transform: scale(3.5);
+  }
+}
+
+@media all and (max-width: 650px) {
+      #star {
+        display: none;
+      }
+}
+
+@media all and (max-width: 550px) {
+  
+  .productContainer{
+    flex-direction: column;
+  }
+  .section1{
+    width: 100%;
+  }
+  .section2{
+    width: 90%;
+    height: 50%;
+  }
+}
